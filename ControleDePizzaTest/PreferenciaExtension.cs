@@ -9,11 +9,11 @@ namespace GerenciadorPizzaTest
     {
         const int LIMITEPREFEENCIA = 5;
 
-        public static void lancarErroAcimaDoLimitePermitido(this List<Preferencia> preferencias) {
+        public static void lancarErroAcimaDoLimitePermitido(this List<Preferencia> preferencias)
+        {
 
             if (preferencias.Count >= LIMITEPREFEENCIA)
                 throw new InvalidOperationException();
         }
-
     }
 }

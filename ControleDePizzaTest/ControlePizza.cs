@@ -93,7 +93,7 @@ namespace GerenciadorPizzaTest
             GerenciadorPizza gerenciador = new GerenciadorPizza();
             var pessoasFiltradas = gerenciador.RemoverPropriaPessoa(Nome, pessoas);
             var pessoaEscolhida = gerenciador.EncontrarPessoasComAfinidade(ListaMinhasPreferencias, pessoasFiltradas);
-            
+
             Assert.Equal(italo.Nome, pessoaEscolhida[0].Nome);
 
         }
@@ -153,7 +153,7 @@ namespace GerenciadorPizzaTest
 
     }
 }
-    
+
 
 
 

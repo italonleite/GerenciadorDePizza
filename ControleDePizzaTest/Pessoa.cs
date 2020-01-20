@@ -11,7 +11,7 @@ namespace GerenciadorPizzaTest
 
         public Pessoa()
         {
-            
+
         }
 
         public Pessoa(string nome)
@@ -20,7 +20,7 @@ namespace GerenciadorPizzaTest
             this.Preferencias = new List<Preferencia>();
         }
 
-       
+
         public void AdicionarPreferencia(Sabor pizza, int nota)
         {
             Preferencias.lancarErroAcimaDoLimitePermitido();
@@ -48,9 +48,5 @@ namespace GerenciadorPizzaTest
             }
             return (minhaLista, p.Nome);
         }
-
-
-
-
     }
 }

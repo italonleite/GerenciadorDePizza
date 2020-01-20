@@ -26,47 +26,45 @@ namespace GerenciadorPizzaTest
                 {
                     filtrados.Add(p);
                 }
-                
+
             }
             return filtrados;
-
         }
 
         public List<Pessoa> EncontrarPessoasComAfinidade(List<Preferencia> ListaMinhasPreferencias, List<Pessoa> filtrados)
         {
-            List<Pessoa> pessoasEscolhidas = new List<Pessoa>();           
-            
-         
-           
-                foreach (var p in filtrados)
-                {
+            List<Pessoa> pessoasEscolhidas = new List<Pessoa>();
+
+            foreach (var p in filtrados)
+            {
                 int j = 0;
                 for (int i = 0; i < 5;)
                 {
                     if (p.Preferencias[i].Pizza == ListaMinhasPreferencias[j].Pizza && p.Preferencias[i].Nota >= ListaMinhasPreferencias[j].Nota)
                     {
-                    
-                        pessoasEscolhidas.Add(p);
-                       
 
-                        if (ListaMinhasPreferencias.Count > 1) {
+                        pessoasEscolhidas.Add(p);
+
+
+                        if (ListaMinhasPreferencias.Count > 1)
+                        {
                             j++;
                             i++;
-                        } else{
+                        }
+                        else
+                        {
                             i++;
                         }
-                        
+
                     }
-                    else{
+                    else
+                    {
                         i++;
-                    }
-
-
+                   }                    
                 }
             }
 
-            return pessoasEscolhidas;           
-
+            return pessoasEscolhidas;
         }
     }
 }
